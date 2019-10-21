@@ -1,0 +1,21 @@
+header {
+  background: $background-color;
+}
+
+.wrapper {
+  @include wrapper;
+}
+
+.h-padding {
+  padding: 38px 0;
+}
+
+.row {
+  @include row-flex;
+  display: flex;
+}
+
+.l-center {
+  align-items: center;
+}
+

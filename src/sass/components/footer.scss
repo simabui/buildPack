@@ -1,0 +1,70 @@
+footer {
+  background-color: $background-color;
+  font-family: $main-font;
+  text-align: center;
+  
+  .row {
+    padding: 70px 0;
+  }
+  
+}
+
+// social links section
+.links {
+  @include col();
+  @include size(4);
+  @include size-md(6);
+  @include size-xs(12);
+  @include xs(margin-top, 30px);
+  
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    color: $white-color;
+    text-transform: uppercase;
+  }
+  
+  .social {
+    justify-content: center;
+  }
+}
+
+//address section
+.location {
+  @include col();
+  @include size(4);
+  @include size-md(6);
+  @include size-xs(12);
+  @include xs(margin-top, 30px);
+  
+  &__title {
+    font-weight: 700;
+    color: $white-color;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  &__desctiption {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    margin-top: 20px;
+  }
+}
+
+//download section
+.download {
+  @include col();
+  @include size(4);
+  @include size-md(6);
+  @include size-xs(12);
+  @include xs(margin-top, 30px);
+  
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    color: $white-color;
+    text-transform: uppercase;
+  }
+  
+}

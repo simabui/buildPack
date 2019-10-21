@@ -1,0 +1,48 @@
+.team {
+  @include wrapper;
+  
+  &__list {
+    @include row-flex;
+    font-family: $main-font;
+    font-weight: 400;
+    padding-bottom: 118px;
+    @include md(padding-bottom, 50px);
+  }
+  
+  &__item {
+    @include col();
+    @include size(3);
+    @include size-md(6);
+    @include size-xs(12);
+    @include md(margin-top, 30px);
+  }
+  
+  &__image {
+    @include transition(border);
+    @include transition(transform);
+    
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 20px 27px rgba(214, 216, 217, 1);
+    }
+  }
+  
+  &__name {
+    font-size: 22px;
+    color: $name-color;
+    margin-top: 28px;
+  }
+  
+  &__position {
+    font-size: 13px;
+    color: $secondary-color;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  
+  &__description {
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 25px;
+  }
+}

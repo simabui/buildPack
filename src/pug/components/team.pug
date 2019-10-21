@@ -1,0 +1,40 @@
+mixin social()
+  div.social
+    div.social__box
+      a(href="#")
+        svg.social__icon
+          use(href="images/icons/sprite.svg#facebook")
+    div.social__box
+      a(href="#")
+        svg.social__icon
+          use(href="images/icons/sprite.svg#twitter")
+    div.social__box
+      a(href="#")
+        svg.social__icon
+          use(href="images/icons/sprite.svg#linkedIn")
+
+mixin team(name, position, link)
+  div.team__item
+    img(src=`images/team-photos/team-${link}.jpg`
+      srcset=`images/team-photos/team-${link}.jpg 300w,` +
+      `images/team-photos/team-${link}@2x.jpg 540w`
+      sizes="270w" alt=name).team__image
+    p.team__name
+      =name
+    p.team__position
+      =position
+    p.team__description.
+      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+      ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius
+      blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.
+    + social
+
+
+section
+  div.team
+    div.team__list
+      + team('Ruth Woods', 'Founder, Ceo', 1)
+      + team('Timothy Reed', 'Co-Founder, Developer', 2)
+      + team('Victoria Valdez', 'Ui Designer', 3)
+      + team('Beverly Little', 'Data Scientist', 4)
+

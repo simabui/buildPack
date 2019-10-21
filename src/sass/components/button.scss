@@ -1,0 +1,8 @@
+
+.download__button{
+  @extend %button;
+  background-color: $secondary-color;
+  border: none;
+  padding: 10px 70px;
+  margin-top: 20px;
+}

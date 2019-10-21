@@ -1,0 +1,57 @@
+.services {
+  @include wrapper;
+  padding-bottom: 88px;
+  @include sm(margin-top, 50px);
+  
+  &__list {
+    @include row-flex;
+    margin-top: 119px;
+    
+  }
+  
+  &__item {
+    @include col();
+    @include size(4);
+    @include size-md(6);
+    @include size-xs(12);
+    @include md(margin-top, 40px);
+    text-align: center;
+    
+    @media screen and (min-width: 1200px) {
+      &:nth-last-child(-n+3) {
+        margin-top: 74px;
+      }
+    }
+  }
+  
+  &__logo {
+    &::before {
+      @include pseudo($display: block);
+      background-size: contain;
+      height: 60px;
+      margin-bottom: 34px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  
+  &__title {
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 700;
+    color: #2d3033;
+    text-transform: uppercase;
+  }
+  
+  &__description {
+    font-family: $main-font;
+    @include font-settings(14px, 21px);
+    font-weight: 400;
+    margin-top: 25px;
+  }
+}
+
+$icons: pencil, display, lamp, atom, backpack, cloud;
+
+@include generate-pseudo-icons('services__logo--', $icons, '../images/serv/icon-', png);
+

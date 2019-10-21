@@ -1,0 +1,13 @@
+header
+  div.wrapper.h-padding
+    div.row.l-center
+      div.logo
+        svg.logo__image
+          use(href="images/icons/sprite.svg#ActiveBox")
+      nav.navigation
+        ul.navigation__list
+          each n in ['features', 'works','our team', 'testimonials', 'download']
+            li.navigation__item
+              a(href="#")=n
+          else
+            li No value
