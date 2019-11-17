@@ -49,7 +49,7 @@ var settings = {
   },
 };
 
-smartgrid('./src/sass/helpers', settings);
+smartgrid('./src/sass/helpers', settings); //edit row-offsets
 
 function html() {
   return src('src/*.html')
