@@ -1,10 +1,10 @@
-@mixin font-face($ff, $fs, $fw,$url) {
+@mixin font-face($ff, $fs, $fw, $url) {
   @font-face {
     font-family: '#{$ff}';
     font-style: $fs;
     font-weight: $fw;
     src: url('#{$url}.woff2') format('woff2'),
-    url('#{$url}.woff') format('woff');
+      url('#{$url}.woff') format('woff');
   }
 }
 
@@ -23,7 +23,8 @@
       to top,
       rgba(230, 204, 128, 0.9) 0%,
       rgba(238, 136, 137, 0.9) 100%
-  ),url($path);
+    ),
+    url($path);
   background-size: $size;
   background-repeat: $repeat;
   background-position: $pos;
@@ -41,7 +42,7 @@
     align-items: center;
   }
 }
-@mixin transition($property){
+@mixin transition($property) {
   transition: $property 0.2s linear;
 }
 @mixin generate-pseudo-icons($baseclass, $list, $path, $ext) {
@@ -56,3 +57,8 @@
   }
 }
 
+@mixin retina-image() {
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
+}
